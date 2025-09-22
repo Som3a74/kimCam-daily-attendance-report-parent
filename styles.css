@@ -1,0 +1,507 @@
+/* ===== CSS Variables ===== */
+:root {
+  --primary: #ff6b35;
+  --primary-soft: #ffede6;
+  --white: #ffffff;
+  --green: #28a745;
+  --green-bg: #e8f5e8;
+  --orange: #ffc107;
+  --orange-bg: #fff8e1;
+  --red: #dc3545;
+  --red-bg: #ffeaea;
+  --dark: #2c3e50;
+  --gray: #6c757d;
+  --light-gray: #f8f9fa;
+  --border: #e9ecef;
+  --shadow: 0 2px 4px rgba(0,0,0,0.1);
+  --radius: 8px;
+  --radius-lg: 12px;
+}
+
+/* ===== Reset & Base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Cairo", "Arial", sans-serif;
+  direction: rtl;
+  text-align: right;
+  background: var(--white);
+  min-height: 100vh;
+  padding: 20px;
+  line-height: 1.6;
+  color: var(--dark);
+}
+
+/* ===== Layout ===== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.content {
+  padding: 30px;
+}
+
+/* ===== Header ===== */
+.header {
+  background: var(--primary);
+  color: var(--white);
+  padding: 30px;
+  text-align: center;
+}
+
+.logo {
+  width: 60px;
+  height: 60px;
+  background: var(--white);
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: block;
+  box-shadow: var(--shadow);
+  padding: 10px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 15px 0 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: #e6e6e6;
+}
+
+/* ===== Sections ===== */
+.student-info,
+.stats-section,
+.sessions-section,
+.exams-section {
+  margin-bottom: 30px;
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 25px;
+  box-shadow: var(--shadow);
+}
+
+.student-info h2,
+.stats-section h2,
+.sessions-section h2,
+.exams-section h2 {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--primary-soft);
+}
+
+/* ===== Student Info ===== */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  background: var(--primary-soft);
+  border-radius: var(--radius);
+  border-right: 4px solid var(--primary);
+}
+
+.info-item .label {
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.info-item .value {
+  font-weight: 500;
+  color: var(--dark);
+}
+
+/* ===== Statistics ===== */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.stat-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 25px;
+  text-align: center;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border);
+  transition: transform 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-card.attendance {
+  border-color: var(--green);
+}
+
+.stat-card.level {
+  border-color: var(--primary);
+}
+
+.stat-icon {
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
+}
+
+.stat-card.attendance .stat-value {
+  color: var(--green);
+}
+
+.stat-card.level .stat-value {
+  color: var(--primary);
+}
+
+/* ===== Sessions ===== */
+.sessions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.session-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--light-gray);
+  border-radius: var(--radius);
+  border-right: 4px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.session-item:hover {
+  background: var(--primary-soft);
+}
+
+.session-item.present {
+  border-right-color: var(--green);
+}
+
+.session-item.absent {
+  border-right-color: var(--red);
+}
+
+.session-date {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.session-details {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+  margin: 0 15px;
+}
+
+.course-type {
+  font-size: 14px;
+  color: var(--gray);
+  font-weight: 500;
+}
+
+.session-time {
+  font-size: 12px;
+  color: var(--gray);
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+}
+
+.status-badge.present {
+  background: var(--green-bg);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.status-badge.absent {
+  background: var(--red-bg);
+  color: var(--red);
+  border: 1px solid var(--red);
+}
+
+/* ===== Exams ===== */
+.exams-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.exam-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: var(--light-gray);
+  border-radius: var(--radius);
+  border-right: 4px solid var(--border);
+  transition: all 0.2s ease;
+}
+
+.exam-item:hover {
+  background: var(--primary-soft);
+}
+
+.exam-item.completed {
+  border-right-color: var(--green);
+}
+
+.exam-item.pending {
+  border-right-color: var(--orange);
+}
+
+.exam-title {
+  font-weight: 600;
+  color: var(--dark);
+  font-size: 16px;
+}
+
+.exam-date {
+  font-size: 14px;
+  color: var(--gray);
+  margin: 0 15px;
+}
+
+.exam-score {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 80px;
+  text-align: center;
+  background: var(--green-bg);
+  color: var(--green);
+  border: 1px solid var(--green);
+}
+
+.exam-status {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  min-width: 120px;
+  text-align: center;
+  background: var(--orange-bg);
+  color: var(--orange);
+  border: 1px solid var(--orange);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: var(--dark);
+  color: var(--white);
+  text-align: center;
+  padding: 25px;
+  margin-top: 30px;
+}
+
+.footer p {
+  margin-bottom: 8px;
+  color: #e6e6e6;
+  font-size: 14px;
+}
+
+/* ===== PDF Print Styles ===== */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  body {
+    background: white !important;
+    color: black !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+  
+  .container {
+    box-shadow: none !important;
+    border: none !important;
+    margin: 0 !important;
+    max-width: none !important;
+    width: 100% !important;
+  }
+  
+  .header {
+    background: #ff6b35 !important;
+    color: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    page-break-inside: avoid;
+  }
+  
+  .content {
+    padding: 20px !important;
+  }
+  
+  .student-info,
+  .stats-section,
+  .sessions-section,
+  .exams-section {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px !important;
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+  }
+  
+  .session-item,
+  .exam-item {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  
+  .stat-card {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  .footer {
+    page-break-inside: avoid;
+    margin-top: 20px !important;
+  }
+  
+  /* Ensure colors print correctly */
+  .status-badge.present,
+  .exam-score {
+    background: #e8f5e8 !important;
+    color: #28a745 !important;
+    border: 1px solid #28a745 !important;
+  }
+  
+  .status-badge.absent,
+  .exam-status {
+    background: #ffeaea !important;
+    color: #dc3545 !important;
+    border: 1px solid #dc3545 !important;
+  }
+  
+  .stat-card.attendance .stat-value {
+    color: #28a745 !important;
+  }
+  
+  .stat-card.level .stat-value {
+    color: #ff6b35 !important;
+  }
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  .header {
+    padding: 20px;
+  }
+  
+  .title {
+    font-size: 24px;
+  }
+  
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .session-item,
+  .exam-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .session-details,
+  .exam-date {
+    margin: 0;
+  }
+  
+  .status-badge,
+  .exam-score,
+  .exam-status {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 0;
+    border-radius: 0;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .header {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .subtitle {
+    font-size: 14px;
+  }
+}
