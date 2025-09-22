@@ -29,119 +29,332 @@
         </div>
 
         <div class="content">
-            <!-- Student Info Section -->
-            <div class="student-info">
-                <h2>تفاصيل الطالب</h2>
-                <div class="info-grid">
-                    <div class="info-item">
-                        <span class="label">اسم الطالب:</span>
-                        <span class="value">أحمد محمد علي</span>
+            <!-- Student Details -->
+            <h3 class="section-title">تفاصيل الطالب</h3>
+            <!-- Student Details Card -->
+            <section class="section-card" aria-label="تفاصيل الطالب">
+                <div class="info-row">
+                    <div class="info-left">
+                        <span class="info-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-user-icon lucide-user">
+                                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                                <circle cx="12" cy="7" r="4" />
+                            </svg>
+                        </span>
+                        <span class="info-label">اسم الطالب</span>
                     </div>
-                    <div class="info-item">
-                        <span class="label">رقم الطالب:</span>
-                        <span class="value">2024001</span>
+                    <div class="info-value">أحمد محمد علي</div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-left">
+                        <span class="info-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-phone-icon lucide-phone">
+                                <path
+                                    d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+                            </svg>
+                        </span>
+                        <span class="info-label">رقم الهاتف</span>
                     </div>
-                    <div class="info-item">
-                        <span class="label">الصف:</span>
-                        <span class="value">الثالث الثانوي</span>
+                    <div class="info-value">+20 1287896542</div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-left">
+                        <span class="info-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-graduation-cap-icon lucide-graduation-cap">
+                                <path
+                                    d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z" />
+                                <path d="M22 10v6" />
+                                <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+                            </svg>
+                        </span>
+                        <span class="info-label">الصف</span>
                     </div>
-                    <div class="info-item">
-                        <span class="label">المجموعة:</span>
-                        <span class="value">مجاميع الأحد</span>
+                    <div class="info-value">الثالث الثانوي</div>
+                </div>
+
+                <div class="info-row">
+                    <div class="info-left">
+                        <span class="info-icon" aria-hidden="true">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="lucide lucide-users-round-icon lucide-users-round">
+                                <path d="M18 21a8 8 0 0 0-16 0" />
+                                <circle cx="10" cy="8" r="5" />
+                                <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+                            </svg>
+                        </span>
+                        <span class="info-label">المجموعة</span>
                     </div>
+                    <div class="info-value">مجاميع الأحد</div>
+                </div>
+            </section>
+
+            <!-- Center Status / Courses Metrics -->
+            <h3 class="section-title">حالة السينتر</h3>
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-head">
+                        <span class="metric-icon icon-green" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M19.4793 21.5494C19.8127 21.2609 20 20.8695 20 20.4615L20 3.53846C20 3.13043 19.8127 2.73912 19.4793 2.4506C19.1459 2.16209 18.6937 2 18.2222 2L5.77778 2C5.30628 2 4.8541 2.16209 4.5207 2.4506C4.1873 2.73912 4 3.13043 4 3.53846L4 20.4615C4 20.8695 4.1873 21.2609 4.5207 21.5494C4.8541 21.8378 5.30628 22 5.77778 22L18.2222 22C18.6937 22 19.1459 21.8378 19.4793 21.5494Z"
+                                    fill="#10B759" stroke="#10B759" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M19 12L10 12" stroke="white" stroke-width="1.7" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12.7961 8.81543L9.61182 11.9997L12.7961 15.184" stroke="white"
+                                    stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                        </span>
+                        <span class="metric-label">نسبة الحضور</span>
+                    </div>
+                    <div class="metric-value">80.0%</div>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-head">
+                        <span class="metric-icon icon-gold" aria-hidden="true">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_11022_13218)">
+                                    <path
+                                        d="M12.0001 22.3492C17.7157 22.3492 22.349 17.7159 22.349 12.0003C22.349 6.28474 17.7157 1.65137 12.0001 1.65137C6.2845 1.65137 1.65112 6.28474 1.65112 12.0003C1.65112 17.7159 6.2845 22.3492 12.0001 22.3492Z"
+                                        fill="#CC9A06" stroke="#CC9A06" stroke-width="1.7" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M12 8.01953V11.9999L16.044 16.7126" stroke="white" stroke-width="1.7"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_11022_13218">
+                                        <rect width="24" height="24" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+
+                        </span>
+                        <span class="metric-label">مستوى الطالب</span>
+                    </div>
+                    <div class="metric-value">90%</div>
                 </div>
             </div>
 
-            <!-- Statistics Section -->
-            <div class="stats-section">
-                <h2>الإحصائيات</h2>
-                <div class="stats-grid">
-                    <div class="stat-card attendance">
-                        <div class="stat-icon">📊</div>
-                        <div class="stat-label">نسبة الحضور</div>
-                        <div class="stat-value">80.0%</div>
+            <!-- Sessions Attendance -->
+            <h3 class="section-title">الحضور حسب الحصص</h3>
+            <section class="list-card" aria-label="الحضور حسب الحصص">
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">مجاميع الأحد - 21/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
                     </div>
-                    <div class="stat-card level">
-                        <div class="stat-icon">⭐</div>
-                        <div class="stat-label">مستوى الطالب</div>
-                        <div class="stat-value">ممتاز</div>
+                    <div class="session-status">
+                        <span class="status-badge status-present">حاضر</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Attendance by Sessions -->
-            <div class="sessions-section">
-                <h2>الحضور حسب الحصص</h2>
-                <div class="sessions-list">
-                    <div class="session-item present">
-                        <div class="session-date">حصة مجاميع الأحد - 21/09/2025</div>
-                        <div class="session-details">
-                            <span class="course-type">مجاميع الأحد</span>
-                            <span class="session-time">15:00:00 2025-09-21 - 09:00:00 2025-09-21</span>
-                        </div>
-                        <div class="status-badge present">حاضر</div>
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 18/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
                     </div>
-                    <div class="session-item present">
-                        <div class="session-date">حصة مجاميع الأحد - 18/09/2025</div>
-                        <div class="session-details">
-                            <span class="course-type">مجاميع الأحد</span>
-                            <span class="session-time">15:00:00 2025-09-21 - 09:00:00 2025-09-21</span>
-                        </div>
-                        <div class="status-badge present">حاضر</div>
-                    </div>
-                    <div class="session-item present">
-                        <div class="session-date">حصة مجاميع الأحد - 16/09/2025</div>
-                        <div class="session-details">
-                            <span class="course-type">مجاميع الأحد</span>
-                            <span class="session-time">15:00:00 2025-09-21 - 09:00:00 2025-09-21</span>
-                        </div>
-                        <div class="status-badge present">حاضر</div>
-                    </div>
-                    <div class="session-item present">
-                        <div class="session-date">حصة مجاميع الأحد - 14/09/2025</div>
-                        <div class="session-details">
-                            <span class="course-type">مجاميع الأحد</span>
-                            <span class="session-time">15:00:00 2025-09-21 - 09:00:00 2025-09-21</span>
-                        </div>
-                        <div class="status-badge present">حاضر</div>
-                    </div>
-                    <div class="session-item absent">
-                        <div class="session-date">حصة مجاميع الأحد - 11/09/2025</div>
-                        <div class="session-details">
-                            <span class="course-type">مجاميع الأحد</span>
-                            <span class="session-time">15:00:00 2025-09-21 - 09:00:00 2025-09-21</span>
-                        </div>
-                        <div class="status-badge absent">غائب</div>
+                    <div class="session-status">
+                        <span class="status-badge status-present">حاضر</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Exams Section -->
-            <div class="exams-section">
-                <h2>الامتحانات</h2>
-                <div class="exams-list">
-                    <div class="exam-item completed">
-                        <div class="exam-title">امتحان الفصل الأول - الرياضيات</div>
-                        <div class="exam-date">15/09/2025</div>
-                        <div class="exam-score">85/100</div>
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 16/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
                     </div>
-                    <div class="exam-item completed">
-                        <div class="exam-title">امتحان الفصل الثاني - الفيزياء</div>
-                        <div class="exam-date">12/09/2025</div>
-                        <div class="exam-score">92/100</div>
-                    </div>
-                    <div class="exam-item pending">
-                        <div class="exam-title">امتحان الفصل الثالث - الكيمياء</div>
-                        <div class="exam-date">10/09/2025</div>
-                        <div class="exam-status">لم يتم التصحيح</div>
-                    </div>
-                    <div class="exam-item completed">
-                        <div class="exam-title">امتحان الفصل الرابع - الأحياء</div>
-                        <div class="exam-date">08/09/2025</div>
-                        <div class="exam-score">78/100</div>
+                    <div class="session-status">
+                        <span class="status-badge status-present">حاضر</span>
                     </div>
                 </div>
-            </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 14/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-present">حاضر</span>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 11/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-absent">غائب</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Payment Status By Session -->
+            <h3 class="section-title">الدفع حسب الحصص</h3>
+            <section class="list-card" aria-label="الدفع حسب الحصص">
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">مجاميع الأحد - 21/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-paid">مدفوعة</span>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 18/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-paid">مدفوعة</span>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 16/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-paid">مدفوعة</span>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 14/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-paid">مدفوعة</span>
+                    </div>
+                </div>
+
+                <div class="session-item">
+                    <div class="session-info">
+                        <div class="session-title">حصة مجاميع الأحد - 11/09/2025</div>
+                        <div class="session-meta">مجاميع الأحد</div>
+                        <div class="session-meta">15:00:00 2025-09-21 - 09:00:00 2025-09-21</div>
+                    </div>
+                    <div class="session-status">
+                        <span class="status-badge status-unpaid">غير مدفوعة</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Exams / Last Quizzes -->
+            <h3 class="section-title">آخر الاختبارات</h3>
+            <section class="list-card" aria-label="آخر الاختبارات">
+                <div class="exam-item">
+                    <div class="exam-left">
+                        <div class="progress-wrap progress--green">
+                            <svg class="progress-svg" viewBox="0 0 42 42" aria-hidden="true">
+                                <circle class="progress-track" cx="21" cy="21" r="18"></circle>
+                                <circle class="progress-bar" cx="21" cy="21" r="18" stroke-dasharray="113.097"
+                                    stroke-dashoffset="22.619"></circle>
+                            </svg>
+                            <div class="progress-text">80%</div>
+                        </div>
+                    </div>
+                    <div class="exam-info">
+                        <div class="exam-title">اختبار قواعد الجبر الأساسية</div>
+                        <div class="exam-meta">15/09/2025</div>
+                        <div class="exam-score">40/50</div>
+                    </div>
+                    <div class="exam-status">
+                        <span class="status-badge status-passed">ناجح</span>
+                    </div>
+                </div>
+
+                <div class="exam-item">
+                    <div class="exam-left">
+                        <div class="progress-wrap progress--red">
+                            <svg class="progress-svg" viewBox="0 0 42 42" aria-hidden="true">
+                                <circle class="progress-track" cx="21" cy="21" r="18"></circle>
+                                <circle class="progress-bar" cx="21" cy="21" r="18" stroke-dasharray="113.097"
+                                    stroke-dashoffset="84.823"></circle>
+                            </svg>
+                            <div class="progress-text">25%</div>
+                        </div>
+                    </div>
+                    <div class="exam-info">
+                        <div class="exam-title">اختبار الحركة في الفيزياء</div>
+                        <div class="exam-meta">12/09/2025</div>
+                        <div class="exam-score">12/50</div>
+                    </div>
+                    <div class="exam-status">
+                        <span class="status-badge status-failed">راسب</span>
+                    </div>
+                </div>
+
+                <div class="exam-item">
+                    <div class="exam-left">
+                        <div class="progress-wrap progress--green">
+                            <svg class="progress-svg" viewBox="0 0 42 42" aria-hidden="true">
+                                <circle class="progress-track" cx="21" cy="21" r="18"></circle>
+                                <circle class="progress-bar" cx="21" cy="21" r="18" stroke-dasharray="113.097"
+                                    stroke-dashoffset="22.619">
+                                </circle>
+                            </svg>
+                            <div class="progress-text">80%</div>
+                        </div>
+                    </div>
+                    <div class="exam-info">
+                        <div class="exam-title">اختبار الأحياء الدقيقة</div>
+                        <div class="exam-meta">09/09/2025</div>
+                        <div class="exam-score">40/50</div>
+                    </div>
+                    <div class="exam-status">
+                        <span class="status-badge status-passed">ناجح</span>
+                    </div>
+                </div>
+
+                <div class="exam-item">
+                    <div class="exam-left">
+                        <div class="progress-wrap progress--red">
+                            <svg class="progress-svg" viewBox="0 0 42 42" aria-hidden="true">
+                                <circle class="progress-track" cx="21" cy="21" r="18"></circle>
+                                <circle class="progress-bar" cx="21" cy="21" r="18" stroke-dasharray="113.097"
+                                    stroke-dashoffset="84.823"></circle>
+                            </svg>
+                            <div class="progress-text">25%</div>
+                        </div>
+                    </div>
+                    <div class="exam-info">
+                        <div class="exam-title">اختبار التفاضل والتكامل</div>
+                        <div class="exam-meta">08/09/2025</div>
+                        <div class="exam-score">12/50</div>
+                    </div>
+                    <div class="exam-status">
+                        <span class="status-badge status-failed">راسب</span>
+                    </div>
+                </div>
+            </section>
+
         </div>
 
         <!-- Footer -->

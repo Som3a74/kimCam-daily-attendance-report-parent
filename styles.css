@@ -82,230 +82,260 @@ body {
 }
 
 /* ===== Sections ===== */
-.student-info,
-.stats-section,
-.sessions-section,
-.exams-section {
-  margin-bottom: 30px;
-  background: var(--white);
-  padding: 25px;
+
+/* Generic card wrapper */
+.section-card {
   border: 1px solid var(--border);
-}
-
-.student-info h2,
-.stats-section h2,
-.sessions-section h2,
-.exams-section h2 {
-  color: var(--primary);
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid var(--primary-soft);
-}
-
-/* ===== Student Info ===== */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.info-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 12px;
-  background: var(--primary-soft);
-  border-right: 4px solid var(--primary);
-}
-
-.info-item .label {
-  font-weight: 600;
-  color: var(--primary);
-}
-
-.info-item .value {
-  font-weight: 500;
-  color: var(--dark);
-}
-
-/* ===== Statistics ===== */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-}
-
-.stat-card {
+  border-radius: 10px;
+  padding: 16px;
   background: var(--white);
-  padding: 25px;
-  text-align: center;
-  border: 2px solid var(--border);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
-.stat-card.attendance {
-  border-color: var(--green);
+/* Row layout like the screenshot */
+.info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--border);
 }
 
-.stat-card.level {
-  border-color: var(--primary);
+.info-row:last-child {
+  border-bottom: none;
 }
 
-.stat-icon {
-  font-size: 32px;
-  margin-bottom: 15px;
+.info-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--dark);
 }
 
-.stat-label {
+.info-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--light-gray);
+  border-radius: 50%;
   font-size: 14px;
-  font-weight: 600;
-  color: var(--gray);
-  margin-bottom: 10px;
 }
 
-.stat-value {
-  font-size: 24px;
+.info-label {
+  font-weight: 500;
+  color: var(--gray);
+}
+
+.info-value {
+  color: var(--dark);
+  font-weight: 600;
+}
+
+/* Section heading */
+.section-title {
+  margin: 22px 0 12px;
+  font-size: 16px;
   font-weight: 700;
   color: var(--dark);
 }
 
-.stat-card.attendance .stat-value {
-  color: var(--green);
+/* Metrics (center status) */
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
 }
 
-.stat-card.level .stat-value {
-  color: var(--primary);
+.metric-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
+  padding: 14px;
 }
 
-/* ===== Sessions ===== */
-.sessions-list {
+.metric-head {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  align-items: center;
+  gap: 10px;
+  color: var(--gray);
+}
+
+.metric-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.metric-label {
+  font-weight: 500;
+}
+
+.metric-value {
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--dark);
+}
+
+/* List card and session rows */
+.list-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--white);
 }
 
 .session-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: var(--light-gray);
-  border-right: 4px solid var(--border);
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
 }
 
-.session-item.present {
-  border-right-color: var(--green);
+.session-item:last-child {
+  border-bottom: none;
 }
 
-.session-item.absent {
-  border-right-color: var(--red);
-}
-
-.session-date {
-  font-weight: 600;
-  color: var(--dark);
-  font-size: 16px;
-}
-
-.session-details {
+.session-info {
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  flex: 1;
-  margin: 0 15px;
+  gap: 4px;
 }
 
-.course-type {
-  font-size: 14px;
-  color: var(--gray);
-  font-weight: 500;
+.session-title {
+  font-weight: 700;
+  color: var(--dark);
 }
 
-.session-time {
-  font-size: 12px;
+.session-meta {
+  font-size: 13px;
   color: var(--gray);
 }
 
 .status-badge {
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  min-width: 80px;
-  text-align: center;
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  border-radius: 6px;
 }
 
-.status-badge.present {
+.status-present {
   background: var(--green-bg);
   color: var(--green);
-  border: 1px solid var(--green);
 }
 
-.status-badge.absent {
+.status-absent {
   background: var(--red-bg);
   color: var(--red);
-  border: 1px solid var(--red);
 }
 
-/* ===== Exams ===== */
-.exams-list {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+/* Payment status */
+.status-paid {
+  background: var(--green-bg);
+  color: var(--green);
 }
 
+.status-unpaid {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+/* Exams list */
 .exam-item {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background: var(--light-gray);
-  border-right: 4px solid var(--border);
+  justify-content: space-between;
+  gap: 12px;
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--border);
 }
 
-.exam-item.completed {
-  border-right-color: var(--green);
+.exam-item:last-child {
+  border-bottom: none;
 }
 
-.exam-item.pending {
-  border-right-color: var(--orange);
+.exam-left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.exam-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
 }
 
 .exam-title {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--dark);
-  font-size: 16px;
 }
 
-.exam-date {
-  font-size: 14px;
+.exam-meta {
+  font-size: 13px;
   color: var(--gray);
-  margin: 0 15px;
 }
 
 .exam-score {
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  min-width: 80px;
-  text-align: center;
-  background: var(--green-bg);
-  color: var(--green);
-  border: 1px solid var(--green);
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--dark);
 }
 
-.exam-status {
-  padding: 8px 16px;
-  border-radius: 20px;
-  font-size: 14px;
-  font-weight: 600;
-  min-width: 120px;
-  text-align: center;
-  background: var(--orange-bg);
-  color: var(--orange);
-  border: 1px solid var(--orange);
+.status-passed {
+  background: var(--green-bg);
+  color: var(--green);
+}
+
+.status-failed {
+  background: var(--red-bg);
+  color: var(--red);
+}
+
+/* SVG circular progress (PDF-friendly) */
+.progress-wrap {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+}
+.progress-svg {
+  width: 42px;
+  height: 42px;
+  transform: rotate(-90deg);
+}
+.progress-track {
+  fill: none;
+  stroke: #f1f1f1;
+  stroke-width: 4;
+}
+.progress-bar {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 4;
+  transition: stroke-dashoffset 0.3s ease;
+}
+.progress-text {
+  position: absolute;
+  font-size: 11px;
+  font-weight: 800;
+  color: var(--dark);
+}
+.progress--green {
+  color: #28a745;
+}
+.progress--red {
+  color: #dc3545;
 }
 
 /* ===== Footer ===== */
@@ -323,131 +353,66 @@ body {
   font-size: 14px;
 }
 
-/* ===== PDF Print Styles ===== */
-@media print {
-  * {
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-  }
-  
-  body {
-    background: white !important;
-    color: black !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    font-size: 12pt;
-    line-height: 1.4;
-  }
-  
-  .container {
-    border: none !important;
-    margin: 0 !important;
-    max-width: none !important;
-    width: 100% !important;
-  }
-  
-  .header {
-    background: #ff6b35 !important;
-    color: white !important;
-    -webkit-print-color-adjust: exact !important;
-    print-color-adjust: exact !important;
-    page-break-inside: avoid;
-  }
-  
-  .content {
-    padding: 20px !important;
-  }
-  
-  .student-info,
-  .stats-section,
-  .sessions-section,
-  .exams-section {
-    break-inside: avoid;
-    page-break-inside: avoid;
-    margin-bottom: 20px !important;
-    border: 1px solid #ddd !important;
-  }
-  
-  .session-item,
-  .exam-item {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-  
-  .stat-card {
-    break-inside: avoid;
-    page-break-inside: avoid;
-  }
-
-  .footer {
-    page-break-inside: avoid;
-    margin-top: 20px !important;
-  }
-  
-  /* Ensure colors print correctly */
-  .status-badge.present,
-  .exam-score {
-    background: #e8f5e8 !important;
-    color: #28a745 !important;
-    border: 1px solid #28a745 !important;
-  }
-  
-  .status-badge.absent,
-  .exam-status {
-    background: #ffeaea !important;
-    color: #dc3545 !important;
-    border: 1px solid #dc3545 !important;
-  }
-  
-  .stat-card.attendance .stat-value {
-    color: #28a745 !important;
-  }
-  
-  .stat-card.level .stat-value {
-    color: #ff6b35 !important;
-  }
-}
-
 /* ===== Responsive ===== */
 @media (max-width: 768px) {
   body {
     padding: 10px;
   }
-  
+
   .content {
     padding: 20px;
   }
-  
+
   .header {
     padding: 20px;
   }
-  
+
   .title {
     font-size: 24px;
   }
-  
-  .info-grid {
+
+  /* removed obsolete .info-grid and .stats-grid rules */
+
+  .metrics-grid {
     grid-template-columns: 1fr;
   }
-  
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  .session-item,
-  .exam-item {
+
+  .session-item {
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
   }
-  
+  .exam-item {
+    padding: 12px 14px;
+    align-items: center;
+    gap: 12px;
+  }
+  .exam-left {
+    flex: 0 0 auto;
+  }
+  .exam-info {
+    gap: 2px;
+    flex: 1;
+  }
+  .exam-status {
+    margin-inline-start: auto;
+    align-self: center;
+  }
+  .progress-wrap {
+    width: 36px;
+    height: 36px;
+  }
+  .progress-svg {
+    width: 36px;
+    height: 36px;
+  }
+
   .session-details,
   .exam-date {
     margin: 0;
   }
-  
+
   .status-badge,
-  .exam-score,
   .exam-status {
     align-self: flex-end;
   }
@@ -457,20 +422,57 @@ body {
   .container {
     margin: 0;
   }
-  
+
   .content {
     padding: 15px;
   }
-  
+
   .header {
     padding: 15px;
   }
-  
+
   .title {
     font-size: 20px;
   }
-  
+
   .subtitle {
     font-size: 14px;
+  }
+
+  /* Extra-small adjustments for exams */
+  .exam-item {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto auto;
+    column-gap: 12px;
+    row-gap: 6px;
+  }
+  .exam-left {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+  .exam-info {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+  .exam-status {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+  }
+  .exam-title {
+    font-size: 14px;
+  }
+  .exam-meta,
+  .exam-score {
+    font-size: 12px;
+  }
+  .progress-wrap {
+    width: 32px;
+    height: 32px;
+  }
+  .progress-svg {
+    width: 32px;
+    height: 32px;
   }
 }
