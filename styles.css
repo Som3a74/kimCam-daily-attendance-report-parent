@@ -13,9 +13,6 @@
   --gray: #6c757d;
   --light-gray: #f8f9fa;
   --border: #e9ecef;
-  --shadow: 0 2px 4px rgba(0,0,0,0.1);
-  --radius: 8px;
-  --radius-lg: 12px;
 }
 
 /* ===== Reset & Base ===== */
@@ -30,7 +27,6 @@ body {
   direction: rtl;
   text-align: right;
   background: var(--white);
-  min-height: 100vh;
   padding: 20px;
   line-height: 1.6;
   color: var(--dark);
@@ -41,9 +37,7 @@ body {
   max-width: 800px;
   margin: 0 auto;
   background: var(--white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow);
-  overflow: hidden;
+  border: 1px solid var(--border);
 }
 
 .content {
@@ -65,7 +59,6 @@ body {
   border-radius: 50%;
   margin: 0 auto 15px;
   display: block;
-  box-shadow: var(--shadow);
   padding: 10px;
   text-align: center;
   line-height: 40px;
@@ -95,9 +88,8 @@ body {
 .exams-section {
   margin-bottom: 30px;
   background: var(--white);
-  border-radius: var(--radius);
   padding: 25px;
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
 }
 
 .student-info h2,
@@ -125,7 +117,6 @@ body {
   align-items: center;
   padding: 12px;
   background: var(--primary-soft);
-  border-radius: var(--radius);
   border-right: 4px solid var(--primary);
 }
 
@@ -148,16 +139,9 @@ body {
 
 .stat-card {
   background: var(--white);
-  border-radius: var(--radius);
   padding: 25px;
   text-align: center;
-  box-shadow: var(--shadow);
   border: 2px solid var(--border);
-  transition: transform 0.2s ease;
-}
-
-.stat-card:hover {
-  transform: translateY(-2px);
 }
 
 .stat-card.attendance {
@@ -207,13 +191,7 @@ body {
   align-items: center;
   padding: 20px;
   background: var(--light-gray);
-  border-radius: var(--radius);
   border-right: 4px solid var(--border);
-  transition: all 0.2s ease;
-}
-
-.session-item:hover {
-  background: var(--primary-soft);
 }
 
 .session-item.present {
@@ -283,13 +261,7 @@ body {
   align-items: center;
   padding: 20px;
   background: var(--light-gray);
-  border-radius: var(--radius);
   border-right: 4px solid var(--border);
-  transition: all 0.2s ease;
-}
-
-.exam-item:hover {
-  background: var(--primary-soft);
 }
 
 .exam-item.completed {
@@ -368,7 +340,6 @@ body {
   }
   
   .container {
-    box-shadow: none !important;
     border: none !important;
     margin: 0 !important;
     max-width: none !important;
@@ -394,7 +365,6 @@ body {
     break-inside: avoid;
     page-break-inside: avoid;
     margin-bottom: 20px !important;
-    box-shadow: none !important;
     border: 1px solid #ddd !important;
   }
   
@@ -486,7 +456,6 @@ body {
 @media (max-width: 480px) {
   .container {
     margin: 0;
-    border-radius: 0;
   }
   
   .content {
